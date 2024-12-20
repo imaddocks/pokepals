@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pok&eacute;pals Card</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="energy-transparent.png" type="image/png">
+</head>
+<body>
+  <div class="card-container">
+      <div class="card">
+        <div class="card-header">
+          <span class="type">Basic</span>
+          <span class="name">Pok&eacute;pals</span>
+          <span class="number">#1</span>
+        </div>
+        <div class="image-placeholder">
+          <img src="snorlax.jpg" alt="Event Image">
+        </div>
+        <div class="card-content">
+          <div class="move">
+            <img src="energy-transparent.png" alt="energy logo" class="energy">
+            <h2>Next Event</h2>
+            <p>Tuesday 14th January 2025 6:30PM</p>
+          </div> 
+          <div class="move">
+            <img src="energy-transparent.png" alt="energy logo" class="energy">
+            <img src="energy-transparent.png" alt="energy logo" class="energy">
+            <h2>Time Remaining</h2>
+            <p id="updateCountdown">Calculating...</p>
+          </div>
+          <div class="move">
+            <img src="energy-transparent.png" alt="energy logo" class="energy">
+            <img src="energy-transparent.png" alt="energy logo" class="energy">
+            <img src="energy-transparent.png" alt="energy logo" class="energy">
+            <h2>Location</h2>
+            <p>TBC</p>
+          </div>
+        </div>
+        <div class="tiny-text">
+          <p>Choose your Pok&eacute;mon, attach any enery card from your deck and get ready to play!</p>
+        </div>
+        <footer>
+          <a href="https://rhoam.co.uk" target="_blank">&copy; <span id="current-year"></span> Made by Rhoam</a>
+        </footer>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

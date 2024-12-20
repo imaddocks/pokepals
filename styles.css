@@ -1,0 +1,194 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #5e9aff, #ff4fa8);
+  font-family: 'Arial', sans-serif;
+  color: rgb(25, 25, 25);
+  cursor: url('Cursor-25.gif') 10 10, auto;  
+}
+
+.card {
+  width: 90%;
+  max-width: 320px;
+  height: 540px;
+  background: rgb(72, 169, 72);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 0, 0, 0.6);
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border: none;
+  outline: 12px solid gold;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  aspect-ratio: 2/3;
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(25, 25, 25);
+  text-shadow: 0 0 5px gold, 0 0 2px white;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.card-header .type {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.card-header .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.card-header .number {
+  font-size: 1.2rem;
+}
+
+/* Image */
+.image-placeholder {
+  width: 98%;
+  height: 50%;
+  border: 3px solid white;
+  border-radius: 8px;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Moves */
+.card-content {
+  margin-top: 5px;
+}
+
+.move {
+  text-align: left;
+  padding: 7px;
+  margin: 5px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.move h2 {
+  margin: 0;
+  font-size: 0.8rem;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.move p {
+  margin: 0;
+  font-size: 0.7rem;
+  flex-basis: 100%;
+  text-align: right;
+  padding-top: 10px;
+}
+
+/* Energy */
+.move img.energy {
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+}
+
+/* Tiny Text */
+.tiny-text {
+  font-size: 0.6rem;
+  text-align: center;
+  color: rgba(3, 42, 9, 0.8);
+  margin-top: 5px;
+  padding: 0 50px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.5rem;
+  margin-top: 5px;
+}
+
+footer a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Scale Card Responsively */
+@media (max-width: 480px) {
+  .card {
+    transform: scale(0.8);
+    padding: 5px;
+  }
+
+  .card-header, .move h2, .move p {
+    font-size: 0.8rem; /* Smaller font */
+  }
+}
+
+/* Scale Up for Larger Screens */
+@media (min-width: 1024px) {
+  .card {
+    transform: scale(1.6);
+  }
+}
+
+/* Glare effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -130%;
+  left: -100%;
+  width: 50%;
+  height: 300%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  transform: rotate(30deg);
+  z-index: 0;
+  transition: left 0.6s ease-in-out;
+}
+
+/* Card Hover Effects */
+.card:hover {
+  transform: rotate(3deg) scale(1.2);
+}
+
+.card:hover::before {
+  left: 185%;
+}
